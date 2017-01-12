@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec41188782/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec41188782.dir/build.make CMakeFiles/cmTryCompileExec41188782.dir/build
+make[1]: ディレクトリ `/home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp' に入ります
+/usr/bin/cmake -E cmake_progress_report /home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec41188782.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec41188782.dir/CheckSymbolExists.c.o   -c /home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec41188782
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec41188782.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec41188782.dir/CheckSymbolExists.c.o  -o cmTryCompileExec41188782 -rdynamic 
+CMakeFiles/cmTryCompileExec41188782.dir/CheckSymbolExists.c.o: 関数 `main' 内:
+CheckSymbolExists.c:(.text+0x16): `pthread_create' に対する定義されていない参照です
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec41188782] エラー 1
+make[1]: ディレクトリ `/home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp' から出ます
+make: *** [cmTryCompileExec41188782/fast] エラー 2
+
+File /home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2734918601/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2734918601.dir/build.make CMakeFiles/cmTryCompileExec2734918601.dir/build
+make[1]: ディレクトリ `/home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp' に入ります
+/usr/bin/cmake -E cmake_progress_report /home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2734918601.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2734918601.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2734918601
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2734918601.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2734918601.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2734918601 -rdynamic -lpthreads 
+/usr/bin/ld: -lpthreads が見つかりません
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec2734918601] エラー 1
+make[1]: ディレクトリ `/home/mech-user/work/nekonote/ros_ws/src/cpp_node/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp' から出ます
+make: *** [cmTryCompileExec2734918601/fast] エラー 2
+
+

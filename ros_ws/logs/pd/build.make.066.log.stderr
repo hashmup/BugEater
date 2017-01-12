@@ -1,0 +1,8 @@
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp: In member function ‘std_msgs::Float32MultiArray Control::setup()’:
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:86:3: error: expected ‘;’ before ‘msg’
+   msg.data.push_back(0.0)
+   ^
+make[2]: *** [CMakeFiles/pd.dir/src/control.cpp.o] エラー 1
+make[2]: *** 未完了のジョブを待っています....
+make[1]: *** [CMakeFiles/pd.dir/all] エラー 2
+make: *** [all] エラー 2

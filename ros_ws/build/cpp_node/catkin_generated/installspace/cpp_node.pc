@@ -1,0 +1,8 @@
+prefix=/home/mech-user/work/nekonote/ros_ws/install
+
+Name: cpp_node
+Description: Description of cpp_node
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/mech-user/work/nekonote/ros_ws/install/lib 
+Requires: 

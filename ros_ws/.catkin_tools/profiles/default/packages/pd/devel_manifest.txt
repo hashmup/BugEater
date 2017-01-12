@@ -1,0 +1,5 @@
+pd
+/home/mech-user/work/nekonote/ros_ws/devel/.private/pd/share/pd/cmake/pdConfig-version.cmake /home/mech-user/work/nekonote/ros_ws/devel/share/pd/cmake/pdConfig-version.cmake
+/home/mech-user/work/nekonote/ros_ws/devel/.private/pd/share/pd/cmake/pdConfig.cmake /home/mech-user/work/nekonote/ros_ws/devel/share/pd/cmake/pdConfig.cmake
+/home/mech-user/work/nekonote/ros_ws/devel/.private/pd/lib/pd/pd /home/mech-user/work/nekonote/ros_ws/devel/lib/pd/pd
+/home/mech-user/work/nekonote/ros_ws/devel/.private/pd/lib/pkgconfig/pd.pc /home/mech-user/work/nekonote/ros_ws/devel/lib/pkgconfig/pd.pc

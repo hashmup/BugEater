@@ -1,0 +1,1 @@
+/home/mech-user/work/nekonote/ros_ws/devel/.private/cpp_node/lib/pkgconfig/cpp_node.pc

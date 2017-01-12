@@ -1,0 +1,7 @@
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/main.cpp: In member function ‘void SubscribeAndPublish::boardCallback(const ConstPtr&)’:
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/main.cpp:31:7: error: ‘best’ was not declared in this scope
+       best->print_board();
+       ^
+make[2]: *** [CMakeFiles/pd.dir/src/main.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/pd.dir/all] エラー 2
+make: *** [all] エラー 2

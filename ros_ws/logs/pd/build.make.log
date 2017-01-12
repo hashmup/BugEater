@@ -1,0 +1,7 @@
+[35m[1mScanning dependencies of target pd
+[0m[ 40%] [ 40%] [ 80%] [ 80%] [32mBuilding CXX object CMakeFiles/pd.dir/src/main.cpp.o
+[32mBuilding CXX object CMakeFiles/pd.dir/src/search.cpp.o
+[0m[0m[32mBuilding CXX object CMakeFiles/pd.dir/src/zobristHash.cpp.o
+[32mBuilding CXX object CMakeFiles/pd.dir/src/board.cpp.o
+[0m[0m[31m[1mLinking CXX executable /home/mech-user/work/nekonote/ros_ws/devel/.private/pd/lib/pd/pd
+[0m[100%] Built target pd

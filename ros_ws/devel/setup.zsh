@@ -1,0 +1,1 @@
+/home/mech-user/work/nekonote/ros_ws/devel/.private/catkin_tools_prebuild/setup.zsh

@@ -1,0 +1,1 @@
+/home/mech-user/work/nekonote/ros_ws/devel/.private/pd/share/pd/cmake/pdConfig.cmake

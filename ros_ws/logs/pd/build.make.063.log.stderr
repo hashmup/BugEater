@@ -1,0 +1,16 @@
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp: In member function ‘std_msgs::Float32MultiArray Control::setup()’:
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:86:3: error: expected ‘;’ before ‘msg’
+   msg.data.push_back(0.0)
+   ^
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/main.cpp: In function ‘int main(int, char**)’:
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/main.cpp:99:5: error: ‘pub3’ was not declared in this scope
+     pub3.publish(msgs);
+     ^
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/main.cpp:100:5: error: ‘loop_rate’ was not declared in this scope
+     loop_rate.sleep();
+     ^
+make[2]: *** [CMakeFiles/pd.dir/src/control.cpp.o] エラー 1
+make[2]: *** 未完了のジョブを待っています....
+make[2]: *** [CMakeFiles/pd.dir/src/main.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/pd.dir/all] エラー 2
+make: *** [all] エラー 2

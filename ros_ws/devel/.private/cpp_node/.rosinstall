@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mech-user/work/nekonote/ros_ws/devel/.private/cpp_node/setup.sh

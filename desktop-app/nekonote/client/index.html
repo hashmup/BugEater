@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bug eater</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="manifest" href="manifest.json">
+  <script>
+    window.$ = require('jquery');
+    const socket = require('socket.io-client')('https://safe-castle-29687.herokuapp.com');
+    const child_process = require('child_process');
+    const path = require('path');
+    const sleep = require('system-sleep');
+    const fs = require('fs');
+    const children = [];
+    let executing = false;
+    let running = true;
+    socket.on('command', (data) => {
+      if (!executing && data == "run pd") {
+        // child_process.exec("python /home/mech-user/work/nekonote/lib/process.py", function(error, stdout, stderr) {
+        // });
+        // children.push(child_process.exec("rosrun pd pd", function (error, stdout, stderror) {
+        //   // $('div').append(error + '<br>');
+        //   $('div').append(stdout + '<br>');
+        //   // $('div').append(stderr + '<br>');
+        // }));
+        child_process.exec("/home/mech-user/work/nekonote/pd/cpp/main", function(error, stdout, stderr) {
+          $('div').append(error + '<br>');
+          $('div').append(stdout + '<br>');
+          $('div').append(stderr + '<br>');
+        });
+      } else if (!executing && data == "run test") {
+        // children.push(child_process.exec("python /home/mech-user/work/nekonote/lib/process_test_app.py", function(error, stdout, stderror) {
+        //   $('div').append(stdout + '<br>');
+        // }));
+        // children.push(child_process.exec("python /home/mech-user/work/nekonote/lib/test_app.py", function(error, stdout, stderror) {
+        //   $('div').append(stdout + '<br>');
+        // }));
+        /*
+        while(running) {
+          fs.stat('/home/mech-user/tmp.png', function(err, stat) {
+            if (err == null) {
+              $('div').append(err + '<br>');
+              //console.log("exist");
+              //let bitmap = fs.readFileSync('/home/mech-user/tmp.png');
+              //let img = new Buffer(bitmap).toString('base64');
+              //socket.emit('image', img);
+              //running = false;
+            }
+          });
+          console.log("test");
+          sleep(1000);
+        }
+        */
+      } else if (data == "stop") {
+        children.forEach(function(child) {
+          child.kill('SIGKILL');
+        });
+        child_process.exec("killall -9 /home/mech-user/work/nekonote/ros_ws/devel/lib/pd/pd", function(error, stdout, stderror) {
+          // $('div').append(error + '<br>');
+          // $('div').append(stdout + '<br>');
+          // $('div').append(stderr + '<br>');
+        });
+        child_process.exec("killall -9 python /home/mech-user/work/nekonote/lib/test_app.py", function(error, stdout, stderror) {
+          // $('div').append(error + '<br>');
+          // $('div').append(stdout + '<br>');
+          // $('div').append(stderr + '<br>');
+        });
+        child_process.exec("killall -9 python /home/mech-user/work/nekonote/lib/process_test_app.py", function(error, stdout, stderror) {
+          // $('div').append(error + '<br>');
+          // $('div').append(stdout + '<br>');
+          // $('div').append(stderr + '<br>');
+        });
+        child_process.exec("killall -9 python /home/mech-user/work/nekonote/lib/process.py", function(error, stdout, stderrr) {
+          // $('div').append(error + '<br>');
+          // $('div').append(stdout + '<br>');
+          // $('div').append(stderr + '<br>');
+        });
+        executing = false;
+      } else {
+        child_process.exec(data, function(error, stdout, stderr) {
+          $('div').append(stdout + '<br>');
+          $('div').append(stderr + '<br>');
+          socket.emit("result", stdout);
+        });
+      }
+    });
+
+    //
+    // ipc.on('command_result', function(event, arg) {
+    //   $('div').append(arg + '<br>');
+    // });
+  </script>
+</head>
+<body ng-app="app" ng-controller="RootCtrl as root">
+<h1>Master Node</h1>
+<div></div>
+<canvas id="canvas"></canvas>
+</body>
+</html>

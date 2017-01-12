@@ -1,0 +1,1 @@
+/home/mech-user/work/nekonote/ros_ws/src/cpp_node/devel/.private/catkin_tools_prebuild/setup.bash

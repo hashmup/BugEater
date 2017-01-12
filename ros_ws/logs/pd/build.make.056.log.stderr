@@ -1,0 +1,11 @@
+In file included from /home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:1:0:
+/home/mech-user/work/nekonote/ros_ws/src/pd/include/control.h:18:3: error: ‘Float32MultiArray’ in namespace ‘std_msgs’ does not name a type
+   std_msgs::Float32MultiArray getMsgs2(vector<P> path);
+   ^
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:57:1: error: ‘Float32MultiArray’ in namespace ‘std_msgs’ does not name a type
+ std_msgs::Float32MultiArray Control::getMsgs2(vector<P> path) {
+ ^
+make[2]: *** [CMakeFiles/pd.dir/src/control.cpp.o] エラー 1
+make[2]: *** 未完了のジョブを待っています....
+make[1]: *** [CMakeFiles/pd.dir/all] エラー 2
+make: *** [all] エラー 2

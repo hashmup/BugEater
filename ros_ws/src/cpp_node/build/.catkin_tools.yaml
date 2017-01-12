@@ -1,0 +1,6 @@
+devel_space: /home/mech-user/work/nekonote/ros_ws/src/cpp_node/devel
+install: false
+install_space: /home/mech-user/work/nekonote/ros_ws/src/cpp_node/install
+profile: default
+source_space: /home/mech-user/work/nekonote/ros_ws/src/cpp_node/src
+workspace: /home/mech-user/work/nekonote/ros_ws/src/cpp_node

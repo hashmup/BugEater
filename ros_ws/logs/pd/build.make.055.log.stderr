@@ -1,0 +1,12 @@
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:57:1: error: ‘Float32MultiArray’ in namespace ‘std_msgs’ does not name a type
+ std_msgs::Float32MultiArray Control::getMsgs2(vector<P> path) {
+ ^
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/main.cpp: In member function ‘void SubscribeAndPublish::boardCallback2(const ConstPtr&)’:
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/main.cpp:72:65: error: conversion from ‘std_msgs::Int32MultiArray’ to non-scalar type ‘std_msgs::Float32MultiArray’ requested
+       std_msgs::Float32MultiArray msgs = ctl.getMsgs2(best->path);
+                                                                 ^
+make[2]: *** [CMakeFiles/pd.dir/src/control.cpp.o] エラー 1
+make[2]: *** 未完了のジョブを待っています....
+make[2]: *** [CMakeFiles/pd.dir/src/main.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/pd.dir/all] エラー 2
+make: *** [all] エラー 2

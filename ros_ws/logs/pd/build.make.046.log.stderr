@@ -1,0 +1,30 @@
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp: In member function ‘std_msgs::Int32MultiArray Control::getMsgs2(std::vector<std::pair<int, int> >)’:
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:60:63: error: no matching function for call to ‘std::vector<std_msgs::MultiArrayDimension_<std::allocator<void> >, std::allocator<std_msgs::MultiArrayDimension_<std::allocator<void> > > >::push_back(std_msgs::MultiArrayDimension*)’
+   msg.layout.dim.push_back(new std_msgs::MultiArrayDimension());
+                                                               ^
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:60:63: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from /usr/include/c++/4.8/bits/random.h:34,
+                 from /usr/include/c++/4.8/random:50,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /home/mech-user/work/nekonote/ros_ws/src/pd/include/bits/stdc++.h:67,
+                 from /home/mech-user/work/nekonote/ros_ws/src/pd/include/control.h:4,
+                 from /home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:1:
+/usr/include/c++/4.8/bits/stl_vector.h:901:7: note: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std_msgs::MultiArrayDimension_<std::allocator<void> >; _Alloc = std::allocator<std_msgs::MultiArrayDimension_<std::allocator<void> > >; std::vector<_Tp, _Alloc>::value_type = std_msgs::MultiArrayDimension_<std::allocator<void> >]
+       push_back(const value_type& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:901:7: note:   no known conversion for argument 1 from ‘std_msgs::MultiArrayDimension* {aka std_msgs::MultiArrayDimension_<std::allocator<void> >*}’ to ‘const value_type& {aka const std_msgs::MultiArrayDimension_<std::allocator<void> >&}’
+/usr/include/c++/4.8/bits/stl_vector.h:919:7: note: void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std_msgs::MultiArrayDimension_<std::allocator<void> >; _Alloc = std::allocator<std_msgs::MultiArrayDimension_<std::allocator<void> > >; std::vector<_Tp, _Alloc>::value_type = std_msgs::MultiArrayDimension_<std::allocator<void> >]
+       push_back(value_type&& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:919:7: note:   no known conversion for argument 1 from ‘std_msgs::MultiArrayDimension* {aka std_msgs::MultiArrayDimension_<std::allocator<void> >*}’ to ‘std::vector<std_msgs::MultiArrayDimension_<std::allocator<void> >, std::allocator<std_msgs::MultiArrayDimension_<std::allocator<void> > > >::value_type&& {aka std_msgs::MultiArrayDimension_<std::allocator<void> >&&}’
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:78:14: error: ‘std_msgs::Int32MultiArray_<std::allocator<void> >::_layout_type’ has no member named ‘dim_length’
+   msg.layout.dim_length = 1;
+              ^
+/home/mech-user/work/nekonote/ros_ws/src/pd/src/control.cpp:79:14: error: ‘std_msgs::Int32MultiArray_<std::allocator<void> >::_layout_type’ has no member named ‘data_length’
+   msg.layout.data_length = msg.data.size();
+              ^
+make[2]: *** [CMakeFiles/pd.dir/src/control.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/pd.dir/all] エラー 2
+make: *** [all] エラー 2
